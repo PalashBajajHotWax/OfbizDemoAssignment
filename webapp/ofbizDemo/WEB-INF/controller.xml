@@ -47,6 +47,11 @@ under the License.
         <event type="service" invoke="createOfbizDemo"/>
         <response name="success" type="view" value="main"/>
     </request-map>
+    <request-map uri="createOfbizDemoByJavaService">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="createOfbizDemoByJavaService"/>
+        <response name="success" type="view" value="main"/>
+    </request-map>
 
     <!-- View Mappings -->
     <view-map name="main" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#main"/>
