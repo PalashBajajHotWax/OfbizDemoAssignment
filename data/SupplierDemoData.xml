@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+    <Party partyId="SUP_0002" partyTypeId="PARTY_GROUP"/>
+
+    <PartyGroup partyId="SUP_0002" groupName="SUP0002_wholesale"/>
+
+    <PartyRole partyId="SUP_0002" roleTypeId="SUPPLIER"/>
+
+    <ContactMech contactMechId="CMI_0001" contactMechTypeId="EMAIL_ADDRESS" infoString="sup0002@gmail.com"/>
+    <ContactMech contactMechId="CMI_0002" contactMechTypeId="TELECOM_NUMBER"/>
+    <ContactMech contactMechId="CMI_0003" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="CMI_0004" contactMechTypeId="POSTAL_ADDRESS"/>
+
+    <PartyContactMech partyId="SUP_0002" contactMechId="CMI_0001" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0002" contactMechId="CMI_0002" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0002" contactMechId="CMI_0003" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0002" contactMechId="CMI_0004" fromDate="2021-09-27 00:00:00.000"/>
+
+    <PartyContactMechPurpose partyId="SUP_0002" contactMechId="CMI_0001" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="SUP_0002" contactMechId="CMI_0002" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="SUP_0002" contactMechId="CMI_0003" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="SUP_0002" contactMechId="CMI_0004" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
+
+    <PartyRelationship partyIdFrom="SUP_0002" roleTypeIdFrom="SUPPLIER" partyIdTo="Company" roleTypeIdTo="_NA_" fromDate="2021-09-27 00:00:00.000"/>
+
+    <TelecomNumber contactMechId="CMI_0002" countryCode="91" areaCode="451111" contactNumber="8819001308"/>
+
+    <PostalAddress contactMechId="CMI_0003" toName="SUP0002 Demo" address1="SUP0002 Vijay Nagar" city="Indore" postalCode="123456"/>
+    <PostalAddress contactMechId="CMI_0004" toName="SUP0002 Demo" address1="SUP0002 Vijay Nagar" city="Indore" postalCode="123456"/>
+</entity-engine-xml>
