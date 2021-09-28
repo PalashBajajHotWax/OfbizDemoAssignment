@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+    <Product productId="P_0001" productTypeId="FINISHED_GOOD" productName="Shirt" internalName="XYZ_Shirt" isVirtual="N" isVariant="N"/>
+    <SupplierProduct productId="P_0001" partyId="SUP_0010" availableFromDate="2021-09-28 15:49:37.0" minimumOrderQuantity="200" lastPrice="50.000" currencyUomId="USD" supplierProductId="SP_001"/>
+
+    <Product productId="P_0002" productTypeId="FINISHED_GOOD" productName="Paint" internalName="XYZ_Paint" isVirtual="N" isVariant="N"/>
+    <SupplierProduct productId="P_0001" partyId="SUP_0010" availableFromDate="2021-09-28 15:49:37.0" minimumOrderQuantity="200" lastPrice="50.000" currencyUomId="USD" supplierProductId="SP_002"/>
+</entity-engine-xml>

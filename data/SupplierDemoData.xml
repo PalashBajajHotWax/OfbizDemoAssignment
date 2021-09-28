@@ -1,48 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <entity-engine-xml>
+
+    <!-- Supplier 1 -->
+
     <Party partyId="SUP_0010" partyTypeId="PARTY_GROUP"/>
-    <Party partyId="SUP_0020" partyTypeId="PARTY_GROUP"/>
     <PartyGroup partyId="SUP_0010" groupName="indian_wholesale"/>
-    <PartyGroup partyId="SUP_0020" groupName="usa_wholesale"/>
     <PartyRelationship partyIdFrom="Company" partyIdTo="SUP_0010" roleTypeIdFrom="OWNER" roleTypeIdTo="SUPPLIER" partyRelationshipTypeId="SUPPLIER_REL" statusId="PARTY_REL_CREATED" fromDate="2021-09-27 00:00:00.000"/>
-    <PartyRelationship partyIdFrom="Company" partyIdTo="SUP_0020" roleTypeIdFrom="OWNER" roleTypeIdTo="SUPPLIER" partyRelationshipTypeId="SUPPLIER_REL" statusId="PARTY_REL_CREATED" fromDate="2021-09-27 00:00:00.000"/>
     <PartyRole partyId="SUP_0010" roleTypeId="SUPPLIER"/>
-    <PartyRole partyId="SUP_0020" roleTypeId="SUPPLIER"/>
 
     <ContactMech contactMechId="CMI_0010" contactMechTypeId="EMAIL_ADDRESS" infoString="sup0010@gmail.com"/>
     <ContactMech contactMechId="CMI_0020" contactMechTypeId="TELECOM_NUMBER"/>
     <ContactMech contactMechId="CMI_0030" contactMechTypeId="POSTAL_ADDRESS"/>
     <ContactMech contactMechId="CMI_0040" contactMechTypeId="POSTAL_ADDRESS"/>
-    <ContactMech contactMechId="CMI_0050" contactMechTypeId="EMAIL_ADDRESS" infoString="sup0020@gmail.com"/>
-    <ContactMech contactMechId="CMI_0060" contactMechTypeId="TELECOM_NUMBER"/>
-    <ContactMech contactMechId="CMI_0070" contactMechTypeId="POSTAL_ADDRESS"/>
-    <ContactMech contactMechId="CMI_0080" contactMechTypeId="POSTAL_ADDRESS"/>
 
     <PostalAddress contactMechId="CMI_0030" toName="SUP0010 Demo" address1="SUP0010 Vijay Nagar" city="Indore" postalCode="123456"/>
     <PostalAddress contactMechId="CMI_0040" toName="SUP0010 Demo" address1="SUP0010 Vijay Nagar" city="Indore" postalCode="123456"/>
-    <PostalAddress contactMechId="CMI_0070" toName="SUP0020 Demo" address1="SUP0020 Lake City" city="LakeCity" postalCode="123111"/>
-    <PostalAddress contactMechId="CMI_0080" toName="SUP0020 Demo" address1="SUP0020 Lake City" city="LakeCity" postalCode="123111"/>
 
     <PartyContactMech partyId="SUP_0010" contactMechId="CMI_0010" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMech partyId="SUP_0010" contactMechId="CMI_0020" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMech partyId="SUP_0010" contactMechId="CMI_0030" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMech partyId="SUP_0010" contactMechId="CMI_0040" fromDate="2021-09-27 00:00:00.000"/>
-    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0050" fromDate="2021-09-27 00:00:00.000"/>
-    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0060" fromDate="2021-09-27 00:00:00.000"/>
-    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0070" fromDate="2021-09-27 00:00:00.000"/>
-    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0080" fromDate="2021-09-27 00:00:00.000"/>
 
     <PartyContactMechPurpose partyId="SUP_0010" contactMechId="CMI_0010" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0010" contactMechId="CMI_0020" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0010" contactMechId="CMI_0030" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0010" contactMechId="CMI_0040" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
+
+    <TelecomNumber contactMechId="CMI_0020" countryCode="91" areaCode="451111" contactNumber="8819001308"/>
+
+    <!-- Supplier 2 -->
+
+    <Party partyId="SUP_0020" partyTypeId="PARTY_GROUP"/>
+    <PartyGroup partyId="SUP_0020" groupName="usa_wholesale"/>
+    <PartyRelationship partyIdFrom="Company" partyIdTo="SUP_0020" roleTypeIdFrom="OWNER" roleTypeIdTo="SUPPLIER" partyRelationshipTypeId="SUPPLIER_REL" statusId="PARTY_REL_CREATED" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyRole partyId="SUP_0020" roleTypeId="SUPPLIER"/>
+
+    <ContactMech contactMechId="CMI_0050" contactMechTypeId="EMAIL_ADDRESS" infoString="sup0020@gmail.com"/>
+    <ContactMech contactMechId="CMI_0060" contactMechTypeId="TELECOM_NUMBER"/>
+    <ContactMech contactMechId="CMI_0070" contactMechTypeId="POSTAL_ADDRESS"/>
+    <ContactMech contactMechId="CMI_0080" contactMechTypeId="POSTAL_ADDRESS"/>
+
+    <PostalAddress contactMechId="CMI_0070" toName="SUP0020 Demo" address1="SUP0020 Lake City" city="LakeCity" postalCode="123111"/>
+    <PostalAddress contactMechId="CMI_0080" toName="SUP0020 Demo" address1="SUP0020 Lake City" city="LakeCity" postalCode="123111"/>
+
+    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0050" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0060" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0070" fromDate="2021-09-27 00:00:00.000"/>
+    <PartyContactMech partyId="SUP_0020" contactMechId="CMI_0080" fromDate="2021-09-27 00:00:00.000"/>
+
     <PartyContactMechPurpose partyId="SUP_0020" contactMechId="CMI_0050" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0020" contactMechId="CMI_0060" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0020" contactMechId="CMI_0070" contactMechPurposeTypeId="GENERAL_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
     <PartyContactMechPurpose partyId="SUP_0020" contactMechId="CMI_0080" contactMechPurposeTypeId="PRIMARY_LOCATION" fromDate="2021-09-27 00:00:00.000"/>
 
-    <TelecomNumber contactMechId="CMI_0020" countryCode="91" areaCode="451111" contactNumber="8819001308"/>
     <TelecomNumber contactMechId="CMI_0060" countryCode="1" areaCode="801" contactNumber="1111222234"/>
 
 </entity-engine-xml>
