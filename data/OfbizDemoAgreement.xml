@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+
+    <Agreement agreementId="1000-AG" agreementTypeId="PURCHASE_AGREEMENT" partyIdFrom="Company" partyIdTo="SUP_0020" fromDate="2021-09-30 00:00:00.0"/>
+    <AgreementItem agreementId="1000-AG" agreementItemSeqId="00001" agreementItemTypeId="AGREEMENT_PRICING_PR" currencyUomId="USD"/>
+    <AgreementProductAppl agreementId="1000-AG" agreementItemSeqId="00001" price="16" productId="P_0001"/>
+    <AgreementTerm agreementTermId="10020" termTypeId="FIN_PAY_NETDAYS_1" agreementId="1000-AG" agreementItemSeqId="00001" termDays="30"/>
+
+    <Agreement agreementId="2000-AG" agreementTypeId="PURCHASE_AGREEMENT" partyIdFrom="Company" partyIdTo="SUP_0020" fromDate="2021-09-30 00:00:00.0"/>
+    <AgreementItem agreementId="2000-AG" agreementItemSeqId="00001" agreementItemTypeId="AGREEMENT_PRICING_PR" currencyUomId="USD"/>
+    <AgreementProductAppl agreementId="2000-AG" agreementItemSeqId="00001" price="16" productId="P_0001"/>
+
+</entity-engine-xml>
