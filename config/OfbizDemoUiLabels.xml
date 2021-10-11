@@ -48,6 +48,9 @@ under the License.
     <property key="FindSupplier">
         <value xml:lang="en">Find Supplier</value>
     </property>
+    <property key="FindSupplierByDetail">
+        <value xml:lang="en">Find Supplier By Detail</value>
+    </property>
     <property key="OfbizDemoFirstName">
         <value xml:lang="en">First Name</value>
     </property>
