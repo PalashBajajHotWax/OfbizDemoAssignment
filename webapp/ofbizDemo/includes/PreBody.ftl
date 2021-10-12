@@ -20,6 +20,18 @@
             <li>
                 <a href="<@ofbizUrl>main</@ofbizUrl>">Main</a>
             </li>
+            <li>
+                <a href="<@ofbizUrl>FindOfbizDemo</@ofbizUrl>">FindOfbizDemo</a>
+            </li>
+            <li>
+                <a href="<@ofbizUrl>AddOfbizDemoFtl</@ofbizUrl>">AddOfbizDemoFtl</a>
+            </li>
+            <li>
+                <a href="<@ofbizUrl>FindSupplier</@ofbizUrl>">FindSupplier</a>
+            </li>
+            <li>
+                <a href="<@ofbizUrl>FindSupplierByDetail</@ofbizUrl>">FindSupplierByDetail</a>
+            </li>
             <li class="pull-right">
               <a href="<@ofbizUrl>logout</@ofbizUrl>" title="${uiLabelMap.CommonLogout}">logout</i></a>
             </li>
