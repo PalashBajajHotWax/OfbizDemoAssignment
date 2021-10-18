@@ -9,13 +9,13 @@
         <description>Creates Supplier record using service in java</description>
         <attribute name="groupName" type="String" mode="IN" optional="false"/>
         <attribute name="contactNumber" type="String" mode="IN" optional="false"/>
-        <attribute name="emailAddress" type="String" mode="IN" optional="false"/>
+        <attribute name="emailAddress" type="String" mode="IN" optional="true"/>
         <attribute name="address1" type="String" mode="IN" optional="false"/>
-        <attribute name="address2" type="String" mode="IN" optional="false"/>
-        <attribute name="countryGeoId" type="String" mode="IN" optional="false"/>
-        <attribute name="stateProvinceGeoId" type="String" mode="IN" optional="false"/>
-        <attribute name="city" type="String" mode="IN" optional="false"/>
-        <attribute name="postalCode" type="String" mode="IN" optional="false"/>
+        <attribute name="address2" type="String" mode="IN" optional="true"/>
+        <attribute name="countryGeoId" type="String" mode="IN" optional="true"/>
+        <attribute name="stateProvinceGeoId" type="String" mode="IN" optional="true"/>
+        <attribute name="city" type="String" mode="IN" optional="true"/>
+        <attribute name="postalCode" type="String" mode="IN" optional="true"/>
         <attribute name="partyId" type="String" mode="OUT" optional="false" />
     </service>
 </services>

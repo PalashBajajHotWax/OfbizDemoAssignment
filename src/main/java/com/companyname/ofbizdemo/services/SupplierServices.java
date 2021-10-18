@@ -26,7 +26,6 @@ public class SupplierServices {
         LocalDispatcher dispatcher = dctx.getDispatcher();
         GenericValue userLogin = (GenericValue) context.get("userLogin");
         Map<String, Object> serviceResult = new HashMap();
-        Debug.log("============== Context ================"+context);
         try {
             /* Create Party Group */
             serviceCtx = dctx.makeValidContext("createPartyGroup", ModelService.IN_PARAM, context);
@@ -85,9 +84,6 @@ public class SupplierServices {
                 return ServiceUtil.returnError(ServiceUtil.getErrorMessage(serviceResult));
             }
             serviceCtx.clear();
-
-
-            Debug.log("+++++++++++++++ Successfully Completed +++++++++++++", module);
             result.put("partyId", partyId);
         } catch (GenericServiceException e) {
             Debug.logError(e, e.getMessage(), module);

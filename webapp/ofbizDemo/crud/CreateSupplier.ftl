@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Create Supplier</h3>
+    <h3 class="panel-title">${uiLabelMap.CreateSupplier}</h3>
   </div>
   <div class="panel-body">
     <form method="post" action="<@ofbizUrl>createSupplier</@ofbizUrl>" name="createSupplier" class="form-vertical">
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-control btn-primary col-lg-6">${uiLabelMap.CommonAdd}</button>
+            <button type="submit" class="btn btn-control btn-primary col-lg-6">${uiLabelMap.CreateSupplier}</button>
         </div>
       </div>
     </form>

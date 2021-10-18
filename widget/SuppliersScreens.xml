@@ -13,7 +13,7 @@
                 <decorator-screen name="OfbizDemoCommonDecorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
                         <platform-specific>
-                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/FindSupplier.ftl"/></html>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/ListSupplier.ftl"/></html>
                         </platform-specific>
                     </decorator-section>
                 </decorator-screen>
