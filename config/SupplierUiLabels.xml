@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/ofbiz-properties.xsd">
+    <property key="FindSupplier">
+        <value xml:lang="en">Find Supplier</value>
+    </property>
+    <property key="SupplierSupplierList">
+        <value xml:lang="en">Supplier List</value>
+    </property>
+    <property key="CreateSupplier">
+        <value xml:lang="en">Create Supplier</value>
+    </property>
+    <property key="SupplierGroupName">
+        <value xml:lang="en">Supplier Name</value>
+    </property>
+    <property key="SupplierPhoneNumber">
+        <value xml:lang="en">Phone Number</value>
+    </property>
+    <property key="SupplierPostalAddress">
+        <value xml:lang="en">Address</value>
+    </property>
+    <property key="SupplierPostalCode">
+        <value xml:lang="en">Postal Code</value>
+    </property>
+</resource>

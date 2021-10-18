@@ -1,6 +1,22 @@
 import org.apache.ofbiz.party.party.PartyHelper;
+import org.apache.ofbiz.base.util.UtilValidate;
+import org.apache.ofbiz.entity.util.EntityQuery;
+import org.apache.ofbiz.entity.GenericValue;
+import org.apache.ofbiz.entity.condition.EntityOperator
+import org.apache.ofbiz.entity.condition.EntityCondition
 
-supplierRelationships = from("PartyRelationship").where("roleTypeIdTo", "SUPPLIER").filterByDate().queryList()
+keyword = parameters.keyword
+conditionList = [];
+conditions = [];
+if (keyword){
+        conditionList.add(EntityCondition.makeCondition("partyId", EntityOperator.LIKE, "%"+keyword+"%"));
+        conditionList.add(EntityCondition.makeCondition("groupName", EntityOperator.LIKE, "%"+keyword+"%"));
+}
+EntityCondition condition = EntityCondition.makeCondition(conditionList, EntityOperator.OR);
+conditions.add(condition);
+conditions.add(EntityCondition.makeCondition("roleTypeIdTo", "SUPPLIER"));
+
+supplierRelationships = from("PartyRelationshipAndDetail").where(conditions).filterByDate().queryList()
 suppliers = []
 supplierRelationships.each { supplierRelationship  ->
         supplierInfo = [:]
@@ -21,9 +37,11 @@ supplierRelationships.each { supplierRelationship  ->
         primaryAddressPartyContactMechPurpose = from("PartyContactMechPurpose").where("partyId", supplierRelationship.partyIdTo, "contactMechPurposeTypeId", "PRIMARY_LOCATION").filterByDate().queryFirst();
         primaryAddressContactMech = from("PostalAddress").where("contactMechId", primaryAddressPartyContactMechPurpose?.contactMechId).queryOne();
         supplierInfo.primaryAddress1 = primaryAddressContactMech?.address1;
+        supplierInfo.primaryAddress2 = primaryAddressContactMech?.address2;
         supplierInfo.primaryAddressCity = primaryAddressContactMech?.city;
         supplierInfo.primaryAddressPostal = primaryAddressContactMech?.postalCode;
         suppliers.add(supplierInfo)
 }
+
 
 context.suppliers = suppliers;

@@ -26,6 +26,8 @@ under the License.
             <actions>
                 <property-map resource="OfbizDemoUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
+                <property-map resource="SupplierUiLabels" map-name="uiLabelMap" global="true"/>
+
 
                 <set field="layoutSettings.companyName" from-field="uiLabelMap.OfbizDemoCompanyName" global="true"/>
                 <set field="layoutSettings.companySubtitle" from-field="uiLabelMap.OfbizDemoCompanySubtitle" global="true"/>
@@ -79,6 +81,7 @@ under the License.
     <actions>
         <property-map resource="OfbizDemoUiLabels" map-name="uiLabelMap" global="true"/>
         <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
+        <property-map resource="SupplierUiLabels" map-name="uiLabelMap" global="true"/>
 
         <set field="layoutSettings.companyName" from-field="uiLabelMap.OfbizDemoCompanyName" global="true"/>
 

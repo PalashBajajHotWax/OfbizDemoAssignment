@@ -18,6 +18,7 @@ supplierRelationships.each { supplierRelationship ->
     //Supplier's Primary Address
     primaryAddressContactMech = from("PartyContactDetailByPurpose").where("partyId", supplierRelationship.partyIdTo, "contactMechPurposeTypeId", "PRIMARY_LOCATION").filterByDate().queryFirst();
     supplierInfo.primaryAddress1 = primaryAddressContactMech?.address1;
+    supplierInfo.primaryAddress1 = primaryAddressContactMech?.address2;
     supplierInfo.primaryCity = primaryAddressContactMech?.city;
     supplierInfo.primaryPostal = primaryAddressContactMech?.postalCode;
 

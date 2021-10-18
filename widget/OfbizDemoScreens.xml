@@ -111,40 +111,4 @@ under the License.
         </section>
     </screen>
 
-    <screen name="FindSupplier">
-       <section>
-           <actions>
-               <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
-               <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/ListSupplier.groovy"/>
-           </actions>
-           <widgets>
-               <decorator-screen name="OfbizDemoCommonDecorator" location="${parameters.mainDecoratorLocation}">
-                   <decorator-section name="body">
-                       <platform-specific>
-                           <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/FindSupplier.ftl"/></html>
-                       </platform-specific>
-                   </decorator-section>
-               </decorator-screen>
-           </widgets>
-       </section>
-   </screen>
-
-    <screen name="FindSupplierByDetail">
-        <section>
-            <actions>
-                <set field="headerItem" value="main"/><!-- this highlights the selected menu-item with name "main" -->
-                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/ListSupplierByDetail.groovy"/>
-            </actions>
-            <widgets>
-                <decorator-screen name="OfbizDemoCommonDecorator" location="${parameters.mainDecoratorLocation}">
-                    <decorator-section name="body">
-                        <platform-specific>
-                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/FindSupplierByDetail.ftl"/></html>
-                        </platform-specific>
-                    </decorator-section>
-                </decorator-screen>
-            </widgets>
-        </section>
-    </screen>
-
 </screens>

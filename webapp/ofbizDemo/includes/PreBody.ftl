@@ -30,7 +30,7 @@
                 <a href="<@ofbizUrl>FindSupplier</@ofbizUrl>">FindSupplier</a>
             </li>
             <li>
-                <a href="<@ofbizUrl>FindSupplierByDetail</@ofbizUrl>">FindSupplierByDetail</a>
+              <a href="<@ofbizUrl>CreateSupplier</@ofbizUrl>">Create Supplier</a>
             </li>
             <li class="pull-right">
               <a href="<@ofbizUrl>logout</@ofbizUrl>" title="${uiLabelMap.CommonLogout}">logout</i></a>
