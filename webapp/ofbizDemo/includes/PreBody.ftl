@@ -41,3 +41,4 @@
       <div class="row">
         <div class="col-lg-12 header-col">
           <div id="main-content">
+            ${screens.render("component://ofbizDemo/widget/CommonScreens.xml#Messages")}

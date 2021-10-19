@@ -92,4 +92,15 @@ public class SupplierServices {
         return result;
     }
 
+    public static Map<String, Object> updateSupplier(DispatchContext dctx, Map<String, ? extends Object> context) {
+        Map<String, Object> result = ServiceUtil.returnSuccess();
+        Map<String, Object> serviceCtx = new HashMap<>();
+        Delegator delegator = dctx.getDelegator();
+        LocalDispatcher dispatcher = dctx.getDispatcher();
+        GenericValue userLogin = (GenericValue) context.get("userLogin");
+        Map<String, Object> serviceResult = new HashMap();
+        return result;
+    }
+
+
 }

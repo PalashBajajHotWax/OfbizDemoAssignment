@@ -10,6 +10,9 @@
     <property key="CreateSupplier">
         <value xml:lang="en">Create Supplier</value>
     </property>
+    <property key="UpdateSupplier">
+        <value xml:lang="en">Update Supplier</value>
+    </property>
     <property key="SupplierGroupName">
         <value xml:lang="en">Supplier Name</value>
     </property>

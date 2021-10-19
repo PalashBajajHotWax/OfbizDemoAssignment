@@ -3,24 +3,12 @@
     <h3 class="panel-title">${uiLabelMap.CreateSupplier}</h3>
   </div>
   <div class="panel-body">
-    <form method="post" action="<@ofbizUrl>createSupplier</@ofbizUrl>" name="createSupplier" class="form-vertical">
+    <form method="post" action="<@ofbizUrl>updateSupplier</@ofbizUrl>" name="createSupplier" class="form-vertical">
       <div class="row">
         <div class="col-sm-6 mx-auto">
           <div class="form-group">
-            <label for="groupName">${uiLabelMap.SupplierGroupName}</label>
-            <input type="text" class="form-control" id="groupName" name="groupName">
-          </div>
-          <div class="form-group">
-            <label for="contactNumber">${uiLabelMap.SupplierPhoneNumber}</label>
-            <input type="text" class="form-control" id="contactNumber" name="contactNumber" required>        
-          </div>
-          <div class="form-group">
-            <label for="emailAddress">${uiLabelMap.CommonEmail}</label>
-            <input type="text" class="form-control" id="emailAddress" name="emailAddress" required>        
-          </div>
-          <div class="form-group">
             <label for="address1">${uiLabelMap.CommonAddress1}</label>
-            <input type="text" class="form-control" id="address1" name="address1" required>          
+            <input type="text" class="form-control" id="address1" name="address1" required>
           </div>
           <div class="form-group">
             <label for="address2">${uiLabelMap.CommonAddress2}</label>
@@ -44,7 +32,7 @@
           </div>
           <div class="form-group">
             <label for="city">${uiLabelMap.CommonCity}</label>
-            <input type="text" class="form-control" id="city" name="city" required>      
+            <input type="text" class="form-control" id="city" name="city" required>
           </div>
           <div class="form-group">
             <label for="postalCode">${uiLabelMap.SupplierPostalCode}</label>

@@ -13,4 +13,3 @@ context.countryGeoList = countryGeoList
 stateGeoList = from("GeoAssocAndGeoTo").where("geoIdFrom", countryGeoId).queryList()
 context.stateGeoList = stateGeoList
 
-

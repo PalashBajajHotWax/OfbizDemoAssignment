@@ -112,4 +112,17 @@ under the License.
 </section>
 </screen>
 
+    <screen name="Messages">
+        <section>
+            <actions>
+                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/Messages.groovy"/>
+            </actions>
+            <widgets>
+                <platform-specific>
+                    <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/includes/Messages.ftl"/></html>
+                </platform-specific>
+            </widgets>
+        </section>
+    </screen>
+
 </screens>

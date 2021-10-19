@@ -45,6 +45,7 @@ under the License.
     <request-map uri="FindSupplierByDetail"><security https="true" auth="true"/><response name="success" type="view" value="FindSupplierByDetail"/></request-map>
     <request-map uri="FindOfbizDemo"><security https="true" auth="true"/><response name="success" type="view" value="FindOfbizDemo"/></request-map>
     <request-map uri="CreateSupplier"><security https="true" auth="true"/><response name="success" type="view" value="CreateSupplier"/></request-map>
+
     <request-map uri="createOfbizDemo">
         <security https="true" auth="true"/>
         <event type="service" invoke="createOfbizDemo"/>
@@ -68,8 +69,15 @@ under the License.
     </request-map>
     <request-map uri="createSupplier">
         <security https="true" auth="true"/>
-        <event type="service" invoke="createSupplier"/>
+        <event type="java" path="com.companyname.ofbizdemo.events.SupplierEvents" invoke="createSupplierEvent"/>
+        <!--<event type="service" invoke="createSupplier"/>-->
+        <response name="error" type="view" value="CreateSupplier"/>
         <response name="success" type="request-redirect" value="FindSupplier"></response>
+    </request-map>
+    <request-map uri="SupplierOverview">
+        <security https="true" auth="true"/>
+        <response name="error" type="view" value="SupplierOverview"/>
+        <response name="success" type="view" value="SupplierOverview"></response>
     </request-map>
 
     <!--Request Mapping-->
@@ -86,5 +94,7 @@ under the License.
     <view-map name="FindOfbizDemo" type="screen" page="component://ofbizDemo/widget/OfbizDemoScreens.xml#FindOfbizDemo"/>
     <view-map name="FindSupplier" type="screen" page="component://ofbizDemo/widget/SuppliersScreens.xml#FindSupplier"/>
     <view-map name="FindSupplierByDetail" type="screen" page="component://ofbizDemo/widget/SuppliersScreens.xml#FindSupplierByDetail"/>
+    <view-map name="SupplierOverview" type="screen" page="component://ofbizDemo/widget/SuppliersScreens.xml#SupplierOverview"/>
     <view-map name="CreateSupplier" type="screen" page="component://ofbizDemo/widget/SuppliersScreens.xml#CreateSupplier"/>
+
 </site-conf>
