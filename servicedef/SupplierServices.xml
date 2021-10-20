@@ -18,18 +18,26 @@
         <attribute name="postalCode" type="String" mode="IN" optional="true"/>
         <attribute name="partyId" type="String" mode="OUT" optional="false" />
     </service>
-    <service name="updateSupplier" engine="java"
-             location="com.companyname.ofbizdemo.services.SupplierServices" invoke="updateSupplier">
-        <description>Creates Supplier record using service in java</description>
+    <service name="updateBasicInformation" engine="java"
+             location="com.companyname.ofbizdemo.services.SupplierServices" invoke="updateBasicInformation">
+        <description>Update Supplier record using service in java</description>
+        <attribute name="partyId" type="String" mode="IN" optional="false" />
         <attribute name="groupName" type="String" mode="IN" optional="false"/>
+        <attribute name="primaryPhoneContactMechId" type="String" mode="IN" optional="false" />
         <attribute name="contactNumber" type="String" mode="IN" optional="false"/>
+        <attribute name="primaryEmailContactMechId" type="String" mode="IN" optional="false" />
         <attribute name="emailAddress" type="String" mode="IN" optional="true"/>
+    </service>
+    <service name="updateAddressInformation" engine="java"
+             location="com.companyname.ofbizdemo.services.SupplierServices" invoke="updateAddressInformation">
+        <description>Update Supplier record using service in java</description>
+        <attribute name="partyId" type="String" mode="IN" optional="false" />
+        <attribute name="primaryAddressContactMechId" type="String" mode="IN" optional="false"/>
         <attribute name="address1" type="String" mode="IN" optional="false"/>
         <attribute name="address2" type="String" mode="IN" optional="true"/>
         <attribute name="countryGeoId" type="String" mode="IN" optional="true"/>
         <attribute name="stateProvinceGeoId" type="String" mode="IN" optional="true"/>
         <attribute name="city" type="String" mode="IN" optional="true"/>
         <attribute name="postalCode" type="String" mode="IN" optional="true"/>
-        <attribute name="partyId" type="String" mode="OUT" optional="false" />
     </service>
 </services>

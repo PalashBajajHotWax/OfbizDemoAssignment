@@ -60,7 +60,6 @@ public class SupplierEvents{
         }
         if (UtilValidate.isNotEmpty(errorMessageList)) {
             request.setAttribute("errorMessageList", errorMessageList);
-            Debug.log("+++++++++++++++++++++++++" + errorMessageList);
             return "error";
         }
 
@@ -87,4 +86,24 @@ public class SupplierEvents{
         request.setAttribute("_EVENT_MESSAGE_", "Supplier created succesfully.");
         return "success";
     }
+
+   /* public static String updateSupplierEvent(HttpServletRequest request, HttpServletResponse response) {
+        Delegator delegator = (Delegator) request.getAttribute("delegator");
+        LocalDispatcher dispatcher = (LocalDispatcher) request.getAttribute("dispatcher");
+        GenericValue userLogin = (GenericValue) request.getSession().getAttribute("userLogin");
+
+        String groupName = request.getParameter("groupName");
+        String contactNumber = request.getParameter("contactNumber");
+        String emailAddress = request.getParameter("emailAddress");
+        String address1 = request.getParameter("address1");
+        String address2 = request.getParameter("address2");
+        String countryGeoId = request.getParameter("countryGeoId");
+        String stateProvinceGeoId = request.getParameter("stateProvinceGeoId");
+        String city = request.getParameter("city");
+        String postalCode = request.getParameter("postalCode");
+
+        if (UtilValidate.isEmpty(groupName)) {
+
+        }
+    }*/
 }

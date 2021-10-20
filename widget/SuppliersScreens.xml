@@ -58,10 +58,50 @@
         </section>
     </screen>
 
+    <screen name="UpdateBasicInformation">
+        <section>
+            <actions>
+                <set field="titleProperty" value="UpdateBasicInformation"/>
+                <set field="headerItem" value="UpdateBasicInformation"/>
+                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/SupplierOverview.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="OfbizDemoCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/UpdateBasicInformation.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="UpdateAddressInformation">
+        <section>
+            <actions>
+                <set field="titleProperty" value="UpdateBasicInformation"/>
+                <set field="headerItem" value="UpdateBasicInformation"/>
+                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/CreateSupplier.groovy"/>
+                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/SupplierOverview.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="OfbizDemoCommonDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <html><html-template location="component://ofbizDemo/webapp/ofbizDemo/crud/UpdateAddressInformation.ftl"/></html>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
     <screen name="SupplierOverview">
         <section>
             <actions>
                 <set field="headerItem" value="SupplierOverview"/><!-- this highlights the selected menu-item with name "main" -->
+                <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/CreateSupplier.groovy"/>
                 <script location="component://ofbizDemo/webapp/ofbizDemo/WEB-INF/actions/crud/SupplierOverview.groovy"/>
             </actions>
             <widgets>

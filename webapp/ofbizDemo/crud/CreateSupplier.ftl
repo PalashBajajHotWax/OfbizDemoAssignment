@@ -20,11 +20,11 @@
           </div>
           <div class="form-group">
             <label for="address1">${uiLabelMap.CommonAddress1}</label>
-            <input type="text" class="form-control" id="address1" name="address1" required>          
+            <input type="text" class="form-control" id="address1" name="address1">
           </div>
           <div class="form-group">
             <label for="address2">${uiLabelMap.CommonAddress2}</label>
-            <input type="text" class="form-control" id="address2" name="address2" required>
+            <input type="text" class="form-control" id="address2" name="address2">
           </div>
           <div class="form-group">
             <label for="countryGeoId">${uiLabelMap.CommonCountry}</label>
@@ -44,15 +44,15 @@
           </div>
           <div class="form-group">
             <label for="city">${uiLabelMap.CommonCity}</label>
-            <input type="text" class="form-control" id="city" name="city" required>      
+            <input type="text" class="form-control" id="city" name="city">
           </div>
           <div class="form-group">
             <label for="postalCode">${uiLabelMap.SupplierPostalCode}</label>
-            <input type="text" class="form-control" id="postalCode" name="postalCode" required>        </div>
+            <input type="text" class="form-control" id="postalCode" name="postalCode">        </div>
           </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-control btn-primary col-lg-6">${uiLabelMap.CreateSupplier}</button>
+            <button type="submit" class="btn btn-control btn-primary">${uiLabelMap.CreateSupplier}</button>
         </div>
       </div>
     </form>

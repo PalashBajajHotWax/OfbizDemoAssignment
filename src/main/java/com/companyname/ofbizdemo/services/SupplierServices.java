@@ -92,15 +92,80 @@ public class SupplierServices {
         return result;
     }
 
-    public static Map<String, Object> updateSupplier(DispatchContext dctx, Map<String, ? extends Object> context) {
+    public static Map<String, Object> updateBasicInformation(DispatchContext dctx, Map<String, ? extends Object> context) {
         Map<String, Object> result = ServiceUtil.returnSuccess();
         Map<String, Object> serviceCtx = new HashMap<>();
         Delegator delegator = dctx.getDelegator();
         LocalDispatcher dispatcher = dctx.getDispatcher();
         GenericValue userLogin = (GenericValue) context.get("userLogin");
         Map<String, Object> serviceResult = new HashMap();
+
+        try {
+            /* Update Party Group */
+            serviceCtx = dctx.makeValidContext("updatePartyGroup", ModelService.IN_PARAM, context);
+            serviceResult = dispatcher.runSync("updatePartyGroup", serviceCtx);
+            if (ServiceUtil.isError(serviceResult)) {
+                Debug.logError(ServiceUtil.getErrorMessage(serviceResult), module);
+                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(serviceResult));
+            }
+            serviceCtx.clear();
+
+            /* Update Contact Number */
+            serviceCtx = dctx.makeValidContext("updatePartyTelecomNumber", ModelService.IN_PARAM, context);
+            String primaryPhoneContactMechId = (String) context.get("primaryPhoneContactMechId");
+            serviceCtx.put("contactMechId",primaryPhoneContactMechId);
+            serviceResult = dispatcher.runSync("updatePartyTelecomNumber", serviceCtx);
+            if (ServiceUtil.isError(serviceResult)) {
+                Debug.logError(ServiceUtil.getErrorMessage(serviceResult), module);
+                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(serviceResult));
+            }
+            serviceCtx.clear();
+
+            /* Update Email Address */
+            serviceCtx = dctx.makeValidContext("updatePartyEmailAddress", ModelService.IN_PARAM, context);
+            String primaryEmailContactMechId = (String) context.get("primaryEmailContactMechId");
+            serviceCtx.put("contactMechId",primaryEmailContactMechId);
+            serviceResult = dispatcher.runSync("updatePartyEmailAddress", serviceCtx);
+            if (ServiceUtil.isError(serviceResult)) {
+                Debug.logError(ServiceUtil.getErrorMessage(serviceResult), module);
+                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(serviceResult));
+            }
+            serviceCtx.clear();
+
+        } catch (GenericServiceException e) {
+            e.printStackTrace();
+        }
         return result;
     }
 
+    public static Map<String, Object> updateAddressInformation(DispatchContext dctx, Map<String, ? extends Object> context) {
+        Map<String, Object> result = ServiceUtil.returnSuccess();
+        Map<String, Object> serviceCtx = new HashMap<>();
+        Delegator delegator = dctx.getDelegator();
+        LocalDispatcher dispatcher = dctx.getDispatcher();
+        GenericValue userLogin = (GenericValue) context.get("userLogin");
+        Map<String, Object> serviceResult = new HashMap();
 
+        try {
+
+            /* Update Postal Address */
+            serviceCtx = dctx.makeValidContext("updatePartyPostalAddress", ModelService.IN_PARAM, context);
+            String primaryAddressContactMechId = (String) context.get("primaryAddressContactMechId");
+            serviceCtx.put("contactMechId",primaryAddressContactMechId);
+            serviceResult = dispatcher.runSync("updatePartyPostalAddress", serviceCtx);
+            if (ServiceUtil.isError(serviceResult)) {
+                Debug.logError(ServiceUtil.getErrorMessage(serviceResult), module);
+                return ServiceUtil.returnError(ServiceUtil.getErrorMessage(serviceResult));
+            }
+            serviceCtx.clear();
+
+
+
+
+
+        } catch (GenericServiceException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

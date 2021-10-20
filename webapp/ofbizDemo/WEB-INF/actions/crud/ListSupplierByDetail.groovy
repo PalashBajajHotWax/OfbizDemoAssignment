@@ -22,6 +22,7 @@ supplierRelationships.each { supplierRelationship ->
     supplierInfo.primaryCity = primaryAddressContactMech?.city;
     supplierInfo.primaryPostal = primaryAddressContactMech?.postalCode;
 
+
     suppliers.add(supplierInfo)
 }
 
