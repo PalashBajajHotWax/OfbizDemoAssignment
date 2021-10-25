@@ -14,4 +14,8 @@
     <ProductCategoryRollup productCategoryId="BOTTOMS_1000" parentProductCategoryId="CLOTHES_1000" fromDate="2021-10-25 00:00:00.000"/>
     <ProductCategoryRollup productCategoryId="SHORTS_1000" parentProductCategoryId="BOTTOMS_1000" fromDate="2021-10-25 00:00:00.000"/>
     <ProductCategoryRollup productCategoryId="JEANS_1000" parentProductCategoryId="BOTTOMS_1000" fromDate="2021-10-25 00:00:00.000"/>
+    <Product productId="P_5001" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1000" productName="shorts 1" internalName="shorts 1" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5002" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1000" productName="shorts 2" internalName="shorts 2" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5003" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1000" productName="jeans 1" internalName="jeans 1" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5004" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1000" productName="jeans 2" internalName="jeans 2" isVirtual="N" isVariant="N"/>
 </entity-engine-xml>
