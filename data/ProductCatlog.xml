@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProdCatalog prodCatalogId="MY_TEST_CATALOG" catalogName="My Test Catalog" useQuickAdd="Y"/>
+    <ProductStoreCatalog productStoreId="9000" prodCatalogId="MY_TEST_CATALOG" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategory productCategoryId="CLOTHES_1000" productCategoryTypeId="CATALOG_CATEGORY" categoryName="Clothes"/>
+    <ProductCategory productCategoryId="BOTTOMS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Bottoms"/>
+    <ProductCategory productCategoryId="SHORTS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Shorts"/>
+    <ProductCategory productCategoryId="JEANS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Jeans"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="CLOTHES_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="BOTTOMS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="SHORTS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="JEANS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+</entity-engine-xml>

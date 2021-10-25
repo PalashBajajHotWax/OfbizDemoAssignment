@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entitymodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="https://ofbiz.apache.org/dtds/entitymodel.xsd">
+    <!-- ========================================================= -->
+    <!-- ======================== Defaults ======================= -->
+    <!-- ========================================================= -->
+    <title>Entity of OfbizDemo Component</title>
+    <description>None</description>
+    <version>1.0</version>
+
+    <view-entity entity-name="Supplierview"
+                 package-name="org.apache.ofbiz.party.contact" title="Party Supplier View">
+        <member-entity entity-alias="PT" entity-name="Party"/>
+        <member-entity entity-alias="PE" entity-name="Person"/>
+        <member-entity entity-alias="PG" entity-name="PartyGroup"/>
+        <member-entity entity-alias="PR" entity-name="PartyRole"/>
+        <member-entity entity-alias="PREL" entity-name="PartyRelationship"/>
+        <member-entity entity-alias="SI" entity-name="StatusItem"/>
+
+        <alias-all entity-alias="PT"/>
+        <alias-all entity-alias="PR"/>
+        <alias entity-alias="PE" name="firstName"/>
+        <alias entity-alias="PE" name="middleName"/>
+        <alias entity-alias="PE" name="lastName"/>
+        <alias entity-alias="PG" name="groupName"/>
+        <alias entity-alias="PREL" name="relationshipStatusId" field="statusId"/>
+        <alias entity-alias="SI" name="relationshipStatusDesc" field="description"/>
+
+        <view-link entity-alias="PT" rel-entity-alias="PE" rel-optional="true">
+            <key-map field-name="partyId"/>
+        </view-link>
+        <view-link entity-alias="PT" rel-entity-alias="PG" rel-optional="true">
+            <key-map field-name="partyId"/>
+        </view-link>
+        <view-link entity-alias="PT" rel-entity-alias="PR" rel-optional="true">
+            <key-map field-name="partyId"/>
+        </view-link>
+        <view-link entity-alias="PT" rel-entity-alias="PREL" rel-optional="true">
+            <key-map field-name="partyId" rel-field-name="partyIdTo"/>
+        </view-link>
+        <view-link entity-alias="PREL" rel-entity-alias="SI" rel-optional="true">
+            <key-map field-name="statusId"/>
+        </view-link>
+    </view-entity>
+</entitymodel>
