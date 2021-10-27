@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <Picklist picklistId="50000" facilityId="WebStoreWarehouse" statusId="PICKLIST_PICKED" createdByUserLogin="admin" lastModifiedByUserLogin="admin"/>
+    <PicklistBin picklistBinId="60000" picklistId="50000" binLocationNumber="1" primaryOrderId="WSCO10002" primaryShipGroupSeqId="00001"/>
+    <PicklistItem picklistBinId="60000" orderId="WSCO10002" orderItemSeqId="00001" shipGroupSeqId="00001" inventoryItemId="10000" itemStatusId="PICKITEM_COMPLETED" quantity="10"/>
+    <PicklistItem picklistBinId="60000" orderId="WSCO10002" orderItemSeqId="00003" shipGroupSeqId="00001" inventoryItemId="10001" itemStatusId="PICKITEM_COMPLETED" quantity="10"/>
+
+    <Shipment shipmentId="50000" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED" primaryOrderId="WSCO10002" picklistBinId="60000" primaryShipGroupSeqId="00001" estimatedShipCost="10" originFacilityId="WebStoreWarehouse" originTelecomNumberId="9201" destinationTelecomNumberId="9025" partyIdTo="DemoCustomer" partyIdFrom="Company" createdDate="2021-10-27 00:00:00" createdByUser="admin" />
+    <ShipmentItem shipmentId="50000" shipmentItemSeqId="00001" productId="P_1000" quantity="10" />
+    <ShipmentItem shipmentId="50000" shipmentItemSeqId="00001" productId="P_1001" quantity="10" />
+    <OrderShipment orderId="WSCO10002" orderItemSeqId="00001" shipGroupSeqId="00001" shipmentId="50000" shipmentItemSeqId="00001" qunatity="10" />
+    <OrderShipment orderId="WSCO10002" orderItemSeqId="00001" shipGroupSeqId="00003" shipmentId="50000" shipmentItemSeqId="00001" qunatity="10" />
+    <ShipmentRouteSegment shipmentId="50000" shipmentRouteSegmentId="00001" originFacilityId="WebStoreWarehouse" originTelecomNumberId="9201" destContactMechId="9015" carrierPartyTo="UPS" shipmentMethodId="NEXT_DAY" />
+    <ShipmentPackage shipmentId="50000" shipmentPackageSeqId="00001" />
+    <ShipmentPackageRouteSeg shipmentId="50000" shipmentPackageSeqId="00001" shipmentRouteSegmentId="00001" />
+    <InventoryItemDetail inventoryItemId="10000" inventoryItemDetailSeqId="50000" effectiveDate="2021-10-27 00:00:00" qunatityOnHandDiff="-10" availableToPromiseDiff="0" orderId="WSCO10043" orderItemSeqId="00001" shipmentId="50000" />
+    <InventoryItemDetail inventoryItemId="10001" inventoryItemDetailSeqId="50001" effectiveDate="2021-10-27 00:00:00" qunatityOnHandDiff="-10" availableToPromiseDiff="0" orderId="WSCO10043" orderItemSeqId="00001" shipmentId="50000" />
+
+    <OrderStatus orderStatusId="50000" statusId="ITEM_COMPLETED" orderId="WSCO10002" orderItemSeqId="00001" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="50001" statusId="ORDER_COMPLETED" orderId="WSCO10002" orderItemSeqId="00001" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="50002" statusId="ITEM_COMPLETED" orderId="WSCO10002" orderItemSeqId="00001" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="50003" statusId="ORDER_COMPLETED" orderId="WSCO10002" orderItemSeqId="00003" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <ItemIssuance itemIssuanceId="50000" orderId="WSCO10002" orderItemSeqId="00001" shipGroupSeqId="00001" inventoryItemId="10000" shipmentId="50000" shipmentItemSeqId="00001" issuedDatetime="2021-10-27 00:00:00" issuedByUserLoginId="admin" quantity="10" />
+    <ItemIssuance itemIssuanceId="50001" orderId="WSCO10002" orderItemSeqId="00003" shipGroupSeqId="00001" inventoryItemId="10001" shipmentId="50000" shipmentItemSeqId="00001" issuedDatetime="2021-10-27 00:00:00" issuedByUserLoginId="admin" quantity="10" />
+</entity-engine-xml>

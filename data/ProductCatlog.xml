@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entity-engine-xml>
-    <ProdCatalog prodCatalogId="MY_TEST_CATALOG" catalogName="My Test Catalog" useQuickAdd="Y"/>
-    <ProductStoreCatalog productStoreId="9000" prodCatalogId="MY_TEST_CATALOG" fromDate="2021-10-25 00:00:00.000"/>
-    <ProductCategory productCategoryId="CLOTHES_1000" productCategoryTypeId="CATALOG_CATEGORY" categoryName="Clothes"/>
-    <ProductCategory productCategoryId="BOTTOMS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Bottoms"/>
-    <ProductCategory productCategoryId="SHORTS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Shorts"/>
-    <ProductCategory productCategoryId="JEANS_1000" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1000" categoryName="Jeans"/>
-    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="CLOTHES_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
-    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="BOTTOMS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
-    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="SHORTS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
-    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG" productCategoryId="JEANS_1000" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
-    <ProductCategoryRollup productCategoryId="CLOTHES_1000" parentProductCategoryId="MY_TEST_CATALOG" fromDate="2021-10-25 00:00:00.000"/>
-    <ProductCategoryRollup productCategoryId="BOTTOMS_1000" parentProductCategoryId="CLOTHES_1000" fromDate="2021-10-25 00:00:00.000"/>
-    <ProductCategoryRollup productCategoryId="SHORTS_1000" parentProductCategoryId="BOTTOMS_1000" fromDate="2021-10-25 00:00:00.000"/>
-    <ProductCategoryRollup productCategoryId="JEANS_1000" parentProductCategoryId="BOTTOMS_1000" fromDate="2021-10-25 00:00:00.000"/>
-    <Product productId="P_5001" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1000" productName="shorts 1" internalName="shorts 1" isVirtual="N" isVariant="N"/>
-    <Product productId="P_5002" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1000" productName="shorts 2" internalName="shorts 2" isVirtual="N" isVariant="N"/>
-    <Product productId="P_5003" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1000" productName="jeans 1" internalName="jeans 1" isVirtual="N" isVariant="N"/>
-    <Product productId="P_5004" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1000" productName="jeans 2" internalName="jeans 2" isVirtual="N" isVariant="N"/>
+    <ProdCatalog prodCatalogId="MY_TEST_CATALOG_NEW" catalogName="My Test Catalog New" useQuickAdd="Y"/>
+    <ProductStoreCatalog productStoreId="9000" prodCatalogId="MY_TEST_CATALOG_NEW" fromDate="2021-10-25 00:00:00.000"/>
+    <!-- Browse Root Category -->
+    <ProductCategory productCategoryId="MY_CATALOG_1" productCategoryTypeId="CATALOG_CATEGORY" categoryName="My browse root category"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG_NEW" productCategoryId="MY_CATALOG_1" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+
+    <ProductCategory productCategoryId="CLOTHES_1005" productCategoryTypeId="CATALOG_CATEGORY" categoryName="Clothes"/>
+    <ProductCategory productCategoryId="BOTTOMS_1005" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1005" categoryName="Bottoms"/>
+    <ProductCategory productCategoryId="SHORTS_1005" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1005" categoryName="Shorts"/>
+    <ProductCategory productCategoryId="JEANS_1005" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1005" categoryName="Jeans"/>
+
+    <ProductCategoryRollup productCategoryId="CLOTHES_1005" parentProductCategoryId="MY_CATALOG_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="BOTTOMS_1005" parentProductCategoryId="CLOTHES_1005" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="SHORTS_1005" parentProductCategoryId="BOTTOMS_1005" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="JEANS_1005" parentProductCategoryId="BOTTOMS_1005" fromDate="2021-10-25 00:00:00.000"/>
+
+    <Product productId="P_5005" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1005" productName="shorts 10" internalName="shorts 1" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5006" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1005" productName="shorts 20" internalName="shorts 2" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5007" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1005" productName="jeans 10" internalName="jeans 1" isVirtual="N" isVariant="N"/>
+    <Product productId="P_5008" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1005" productName="jeans 20" internalName="jeans 2" isVirtual="N" isVariant="N"/>
+
+    <ProductCategoryMember productCategoryId="SHORTS_1005" productId="P_5005" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="SHORTS_1005" productId="P_5006" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="JEANS_1005" productId="P_5007" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="JEANS_1005" productId="P_5008" fromDate="2021-10-25 00:00:00.000" />
 </entity-engine-xml>
