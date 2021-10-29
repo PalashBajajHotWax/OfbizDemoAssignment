@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <ProdCatalog prodCatalogId="MY_TEST_CATALOG_NEW" catalogName="My Test Catalog New" useQuickAdd="Y"/>
+    <ProductStoreCatalog productStoreId="9000" prodCatalogId="MY_TEST_CATALOG_NEW" fromDate="2021-10-25 00:00:00.000"/>
+    <!-- Browse Root Category -->
+    <ProductCategory productCategoryId="MY_CATALOG_1" productCategoryTypeId="CATALOG_CATEGORY" categoryName="My browse root category"/>
+    <ProdCatalogCategory prodCatalogId="MY_TEST_CATALOG_NEW" productCategoryId="MY_CATALOG_1" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" fromDate="2021-10-25 00:00:00.000"/>
+
+    <ProductCategory productCategoryId="CLOTHES_1" productCategoryTypeId="CATALOG_CATEGORY" categoryName="Clothes"/>
+    <ProductCategory productCategoryId="TOP_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Top"/>
+    <ProductCategory productCategoryId="SHIRT_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Shirt"/>
+    <ProductCategory productCategoryId="BOTTOMS_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Bottoms"/>
+    <ProductCategory productCategoryId="SHORTS_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Shorts"/>
+    <ProductCategory productCategoryId="JEANS_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Jeans"/>
+    <ProductCategory productCategoryId="PANT_1" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CLOTHES_1" categoryName="Jeans"/>
+
+    <ProductCategoryRollup productCategoryId="CLOTHES_1" parentProductCategoryId="MY_CATALOG_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="TOP_1" parentProductCategoryId="CLOTHES_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="SHIRT_1" parentProductCategoryId="TOP_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="BOTTOMS_1" parentProductCategoryId="CLOTHES_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="SHORTS_1" parentProductCategoryId="BOTTOMS_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="JEANS_1" parentProductCategoryId="BOTTOMS_1" fromDate="2021-10-25 00:00:00.000"/>
+    <ProductCategoryRollup productCategoryId="PANT_1" parentProductCategoryId="BOTTOMS_1" fromDate="2021-10-25 00:00:00.000"/>
+
+    <Product productId="P_RED_SHORTS" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1" productName="Red Shorts" internalName="Red Shorts" isVirtual="N" isVariant="N"/>
+    <Product productId="P_BLUE_SHORTS" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHORTS_1" productName="Blue Shorts" internalName="Blue Shorts" isVirtual="N" isVariant="N"/>
+    <Product productId="P_BLACK_JEANS" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1" productName="Black Jeans" internalName="Black Jeans" isVirtual="N" isVariant="N"/>
+    <Product productId="P_BLUE_JEANS" productTypeId="FINISHED_GOOD" primaryProductCategoryId="JEANS_1" productName="Blue Jeans" internalName="Blue Jeans" isVirtual="N" isVariant="N"/>
+    <Product productId="P_RED_SHIRT" productTypeId="FINISHED_GOOD" primaryProductCategoryId="SHIRT_1" productName="Red Shirt" internalName="Red Shirt" isVirtual="N" isVariant="N"/>
+    <Product productId="P_BLACK_PANT" productTypeId="FINISHED_GOOD" primaryProductCategoryId="PANT_1" productName="Black Pant" internalName="Black Pant" isVirtual="N" isVariant="N"/>
+
+    <ProductCategoryMember productCategoryId="SHORTS_1" productId="P_RED_SHORTS" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="SHORTS_1" productId="P_BLUE_SHORTS" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="JEANS_1" productId="P_BLACK_JEANS" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="JEANS_1" productId="P_BLUE_JEANS" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="SHIRT_1" productId="P_RED_SHIRT" fromDate="2021-10-25 00:00:00.000" />
+    <ProductCategoryMember productCategoryId="PANT_1" productId="P_BLACK_PANT" fromDate="2021-10-25 00:00:00.000" />
+
+    <ProductPrice productId="P_RED_SHORTS" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+    <ProductPrice productId="P_BLUE_SHORTS" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+    <ProductPrice productId="P_BLACK_JEANS" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+    <ProductPrice productId="P_BLUE_JEANS" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+    <ProductPrice productId="P_RED_SHIRT" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+    <ProductPrice productId="P_BLACK_PANT" productPriceTypeId="DEFAULT_PRICE" productPricePurposeId="PURCHASE" currencyUomId="USD" productStoreGroupId="_NA_" fromDate="2021-09-01 09:00:00" price="50"/>
+</entity-engine-xml>

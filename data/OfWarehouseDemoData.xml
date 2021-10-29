@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+
+    <!-- Facility 1 -->
+    <Party partyId="DEMO_PERSON_RAM" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+    <Person partyId="DEMO_PERSON_RAM" firstName="Ram" lastName="Mahajan"/>
+    <PartyRole partyId="DEMO_PERSON_RAM" roleTypeId="MANAGER"/>
+    <ContactMech contactMechId="10026" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10026" countryCode="91" areaCode="451111" contactNumber="8819001300"/>
+    <PartyContactMech partyId="DEMO_PERSON_RAM" contactMechId="10026" fromDate="2021-10-04 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="DEMO_PERSON_RAM" contactMechId="10026" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <Party partyId="DEMO_PERSON_LAKHAN" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+    <Person partyId="DEMO_PERSON_LAKHAN" firstName="Lakhan" lastName="Mahajan"/>
+    <PartyRole partyId="DEMO_PERSON_LAKHAN" roleTypeId="RECEIVER"/>
+    <ContactMech contactMechId="10027" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10027" countryCode="91" areaCode="451111" contactNumber="8819001301"/>
+    <PartyContactMech partyId="DEMO_PERSON_LAKHAN" contactMechId="10027" fromDate="2021-10-04 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="DEMO_PERSON_LAKHAN" contactMechId="10027" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <!-- Users -->
+    <Facility facilityId="WAREHOUSE_1" facilityTypeId="WAREHOUSE" ownerPartyId="Company" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" facilityName="Demo Warehouse 1"/>
+    <FacilityParty facilityId="WAREHOUSE_1" partyId="DEMO_PERSON_RAM" roleTypeId="MANAGER" fromDate="2021-10-04 00:00:00.000"/>
+    <FacilityParty facilityId="WAREHOUSE_1" partyId="DEMO_PERSON_LAKHAN" roleTypeId="RECEIVER" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10028" contactMechTypeId="EMAIL_ADDRESS" infoString="xmldemowarehouse1@gmail.com"/>
+    <FacilityContactMech facilityId="WAREHOUSE_1" contactMechId="10028" fromDate="2021-10-04 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_1" contactMechId="10028" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10029" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10029" countryCode="91" areaCode="451111" contactNumber="8819001308"/>
+    <FacilityContactMech facilityId="WAREHOUSE_1" contactMechId="10029" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_1" contactMechId="10029" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10030" contactMechTypeId="POSTAL_ADDRESS"/>
+    <PostalAddress contactMechId="10030" address1="Rajandra Nagar Indore" city="Indore" postalCode="123111"/>
+    <FacilityContactMech facilityId="WAREHOUSE_1" contactMechId="10030" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_1" contactMechId="10030" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10031" contactMechTypeId="POSTAL_ADDRESS"/>
+    <PostalAddress contactMechId="10031" address1="Vijay Nagar Indore" city="Indore" postalCode="123113"/>
+    <FacilityContactMech facilityId="WAREHOUSE_1" contactMechId="10031" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_1" contactMechId="10031" contactMechPurposeTypeId="SHIP_ORIG_LOCATION" fromDate="2021-10-04 00:00:00.000"/>
+
+    <FacilityLocation facilityId="WAREHOUSE_1" locationSeqId="abcd01" locationTypeEnumId="FLT_PICKLOC" areaId="a" aisleId="b" sectionId="c" levelId="d" positionId="01"/>
+    <FacilityLocation facilityId="WAREHOUSE_1" locationSeqId="bcad02" locationTypeEnumId="FLT_PICKLOC" areaId="b" aisleId="c" sectionId="a" levelId="d" positionId="02"/>
+    <FacilityLocation facilityId="WAREHOUSE_1" locationSeqId="dcba03" locationTypeEnumId="FLT_BULK" areaId="d" aisleId="c" sectionId="b" levelId="a" positionId="03"/>
+
+    <ProductFacility productId="P_SHIRT" facilityId="MY_WAREHOUSE"/>
+    <ProductFacility productId="P_PANT" facilityId="MY_WAREHOUSE"/>
+
+    <!-- Facility 2 -->
+
+    <Party partyId="DEMO_PERSON_AJAY" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+    <Person partyId="DEMO_PERSON_AJAY" firstName="Ajay" lastName="Mahajan"/>
+    <PartyRole partyId="DEMO_PERSON_AJAY" roleTypeId="MANAGER"/>
+    <ContactMech contactMechId="10032" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10032" countryCode="91" areaCode="451111" contactNumber="8819001303"/>
+    <PartyContactMech partyId="DEMO_PERSON_AJAY" contactMechId="10032" fromDate="2021-10-04 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="DEMO_PERSON_AJAY" contactMechId="10032" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <Party partyId="DEMO_PERSON_VIJAY" partyTypeId="PERSON" statusId="PARTY_ENABLED"/>
+    <Person partyId="DEMO_PERSON_VIJAY" firstName="Vijay" lastName="Mahajan"/>
+    <PartyRole partyId="DEMO_PERSON_VIJAY" roleTypeId="RECEIVER"/>
+    <ContactMech contactMechId="10033" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10033" countryCode="91" areaCode="451111" contactNumber="8819001304"/>
+    <PartyContactMech partyId="DEMO_PERSON_VIJAY" contactMechId="10033" fromDate="2021-10-04 00:00:00.000"/>
+    <PartyContactMechPurpose partyId="DEMO_PERSON_VIJAY" contactMechId="10033" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <!-- Users -->
+    <Facility facilityId="WAREHOUSE_2" facilityTypeId="WAREHOUSE" ownerPartyId="Company" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" facilityName="XML DemoWarehouse2"/>
+    <FacilityParty facilityId="WAREHOUSE_2" partyId="DEMO_PERSON_AJAY" roleTypeId="MANAGER" fromDate="2021-10-04 00:00:00.000"/>
+    <FacilityParty facilityId="WAREHOUSE_2" partyId="DEMO_PERSON_VIJAY" roleTypeId="RECEIVER" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10034" contactMechTypeId="EMAIL_ADDRESS" infoString="xmldemowarehouse2@gmail.com"/>
+    <FacilityContactMech facilityId="WAREHOUSE_2" contactMechId="10034" fromDate="2021-10-04 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_2" contactMechId="10034" contactMechPurposeTypeId="PRIMARY_EMAIL" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10035" contactMechTypeId="TELECOM_NUMBER"/>
+    <TelecomNumber contactMechId="10035" countryCode="91" areaCode="451111" contactNumber="8819001399"/>
+    <FacilityContactMech facilityId="WAREHOUSE_2" contactMechId="10035" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_2" contactMechId="10035" contactMechPurposeTypeId="PRIMARY_PHONE" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10036" contactMechTypeId="POSTAL_ADDRESS"/>
+    <PostalAddress contactMechId="10036" address1="Rajandre Nagar Indore" city="Indore" postalCode="123111"/>
+    <FacilityContactMech facilityId="WAREHOUSE_2" contactMechId="10036" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_2" contactMechId="10036" contactMechPurposeTypeId="SHIPPING_LOCATION" fromDate="2021-10-04 00:00:00.000"/>
+
+    <ContactMech contactMechId="10037" contactMechTypeId="POSTAL_ADDRESS"/>
+    <PostalAddress contactMechId="10037" address1="Vijay Nagar Indore" city="Indore" postalCode="123111"/>
+    <FacilityContactMech facilityId="WAREHOUSE_2" contactMechId="10037" fromDate="2021-09-27 00:00:00.000"/>
+    <FacilityContactMechPurpose facilityId="WAREHOUSE_2" contactMechId="10037" contactMechPurposeTypeId="SHIP_ORIG_LOCATION" fromDate="2021-10-04 00:00:00.000"/>
+
+    <FacilityLocation facilityId="WAREHOUSE_2" locationSeqId="asdf01" locationTypeEnumId="FLT_PICKLOC" areaId="a" aisleId="s" sectionId="d" levelId="f" positionId="01"/>
+    <FacilityLocation facilityId="WAREHOUSE_2" locationSeqId="sadf02" locationTypeEnumId="FLT_PICKLOC" areaId="s" aisleId="a" sectionId="d" levelId="f" positionId="02"/>
+    <FacilityLocation facilityId="WAREHOUSE_2" locationSeqId="dasf03" locationTypeEnumId="FLT_BULK" areaId="d" aisleId="a" sectionId="s" levelId="f" positionId="03"/>
+
+</entity-engine-xml>

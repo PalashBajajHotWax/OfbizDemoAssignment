@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-engine-xml>
+
+    <SupplierProduct productId="P_RED_SHORTS" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_001"/>
+    <SupplierProduct productId="P_BLUE_SHORTS" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_002"/>
+    <SupplierProduct productId="P_BLACK_JEANS" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_003"/>
+    <SupplierProduct productId="P_BLUE_JEANS" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_004"/>
+    <SupplierProduct productId="P_RED_SHIRT" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_005"/>
+    <SupplierProduct productId="P_BLACK_PANT" partyId="DEMO_SURIYA" availableFromDate="2021-09-28 15:49:37.0" supplierPrefOrderId="10_MAIN_SUPPL" minimumOrderQuantity="200" lastPrice="60.000" currencyUomId="USD" supplierProductId="SP_006"/>
+
+</entity-engine-xml>

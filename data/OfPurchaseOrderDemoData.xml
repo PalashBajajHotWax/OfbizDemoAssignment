@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <!-- create Parches Order -->
+
+    <OrderHeader orderId="ORDER_1" orderTypeId="PURCHASE_ORDER" orderName="garments order" orderDate="2021-10-27 09:00:00" statusId="ORDER_CREATED" currencyUom="USD" remainingSubTotal="10,000" grandTotal="10,000"/>
+    <OrderItem orderId="ORDER_1" orderItemSeqId="00001" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="P_RED_SHIRT" supplierProductId="SP_SHIRT" prodCatelogId="DemoCatelog" quantity="500" unitPrice="50" itemDescription="Shirt" statusId="ITEM_CREATED"/>
+    <OrderItem orderId="ORDER_1" orderItemSeqId="00002" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="P_BLACK_PANT" supplierProductId="SP_PANT" prodCatelogId="DemoCatelog" quantity="500" unitPrice="50" itemDescription="Pant" statusId="ITEM_CREATED"/>
+    <OrderItemShipGroup orderId="ORDER_1" shipGroupSeqId="00001" shipmentMethodTypeId="STANDARD" carrierRoleTypeId="CARRIER" facilityId="WAREHOUSE_1" contactMechId="10031"/>
+    <OrderItemShipGroupAssoc orderId="ORDER_1" orderItemSeqId="00001" shipGroupSeqId="00001" quantity="500" />
+    <OrderItemShipGroupAssoc orderId="ORDER_1" orderItemSeqId="00002" shipGroupSeqId="00001" quantity="500" />
+    <OrderContactMech orderId="ORDER_1" contactMechPurposeTypeId="SHIPPING_LOCATION" contactMechId="10031"/>
+    <OrderRole orderId="ORDER_1" partyId="DEMO_SURIYA" roleTypeId="BILL_FROM_VENDOR" />
+    <OrderRole orderId="ORDER_1" partyId="Company" roleTypeId="BILL_TO_CUSTOMER" />
+    <OrderRole orderId="ORDER_1" partyId="DEMO_SURIYA" roleTypeId="SHIP_FROM_VENDOR" />
+    <OrderRole orderId="ORDER_1" partyId="DEMO_SURIYA" roleTypeId="SUPPLIER_AGENT" />
+    <OrderTerm termTypeId="FIN_PAYMENT_TERM" orderId="ORDER_1" orderItemSeqId="_NA_" termDays="10"/>
+    <OrderAdjustment orderAdjustmentId="ORDER_ADJ_1" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" orderId="ORDER_1" orderItemSeqId="_NA_" shipGroupSeqId="00001" amount="-38.4" productPromoId="9016" productPromoRuleId="01" productPromoActionSeqId="01" createdDate="2008-04-23 16:49:27.866" createdByUserLogin="admin"/>
+    <OrderAdjustment orderAdjustmentId="ORDER_ADJ_1" orderAdjustmentTypeId="SHIPPING_CHARGES" orderId="ORDER_1" orderItemSeqId="_NA_" shipGroupSeqId="00001" amount="12.45" createdDate="2008-04-23 16:49:27.866" createdByUserLogin="admin"/>
+    <OrderStatus orderStatusId="ODR_STATUS_1" statusId="ORDER_CREATED" orderId="ORDER_1" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_2" statusId="ITEM_CREATED" orderId="ORDER_1" orderItemSeqId="00001" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_3" statusId="ITEM_CREATED" orderId="ORDER_1" orderItemSeqId="00002" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+
+    <!-- Approve Perches Order  -->
+    <OrderHeader orderId="ORDER_1" orderTypeId="PURCHASE_ORDER" orderName="garments order" orderDate="2021-10-27 09:00:00" statusId="ORDER_APPROVED" currencyUom="USD" remainingSubTotal="10,000" grandTotal="10,000"/>
+    <OrderStatus orderStatusId="ODR_STATUS_4" statusId="ORDER_APPROVED" orderId="ORDER_1" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_5" statusId="ITEM_APPROVED" orderId="ORDER_1" orderItemSeqId="00001" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_6" statusId="ITEM_APPROVED" orderId="ORDER_1" orderItemSeqId="00002" statusDatetime="2021-10-28 11:00:00" statusUserLogin="admin" />
+
+    <!-- Receive Parches Order Data  -->
+
+    <Shipment shipmentId="SHIPMENT_1" shipmentTypeId="PURCHASE_SHIPMENT" statusId="PURCH_SHIP_RECEIVED" parimaryOrderId="ORDER_1" primaryShipGroupSeqId="00001" estimatedShipCost="0" destinationFacilityId="WAREHOUSE_1" destinationContactMechId="9200" destinationTelecomNumberId="9201" partyIdFrom="DEMO_SURIYA"/>
+    <ShipmentItem shipmentId="SHIPMENT_1" shipmentItemSeqId="00001" productId="P_RED_SHIRT" quantity="500" />
+    <ShipmentItem shipmentId="SHIPMENT_1" shipmentItemSeqId="00002" productId="P_BLACK_PANT" quantity="500" />
+    <OrderShipment orderId="ORDER_1" orderItemSeqId="00001" shipGroupSeqId="00001" shipmentId="SHIPMENT_1" shipmentItemSeqId="00001" quantity="500" />
+    <OrderShipment orderId="ORDER_1" orderItemSeqId="00002" shipGroupSeqId="00001" shipmentId="SHIPMENT_1" shipmentItemSeqId="00002" quantity="500" />
+    <ShipmentRouteSegment shipmentId="SHIPMENT_1" shipmentRouteSegmentId="00001" destFacilityId="WAREHOUSE_1" destContactMechId="9200" carrierPartyTo="_NA_" shipmentMethodId="STANDARD" />
+
+    <InventoryItem inventoryItemId="INV_1" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="P_RED_SHIRT" partyId="DEMO_SURIYA" datetimeReceived="2021-10-23 07:00:00" facilityId="WAREHOUSE_1" lcoationSeqid="abcd01" quantityOnHandTotal="500" availableToPromiseTotal="500" accountingQuantityTotal="500" unitCost="5000" currency="USD"/>
+    <InventoryItem inventoryItemId="INV_2" inventoryItemTypeId="NON_SERIAL_INV_ITEM" productId="P_BLACK_PANT" partyId="DEMO_SURIYA" datetimeReceived="2021-10-23 07:00:00" facilityId="WAREHOUSE_1" lcoationSeqid="abcd01" quantityOnHandTotal="500" availableToPromiseTotal="500" accountingQuantityTotal="500" unitCost="5000" currency="USD"/>
+    <ShipmentReceipt receiptId="REC_1" inventoryItemId="INV_1" productId="P_RED_SHIRT" shipmentId="SHIPMENT_1" orderId="ORDER_1" orderItemSeqId="00001" datetimeReceived="2021-10-23 07:00:00" quantityAccepted="100" />
+    <ShipmentReceipt receiptId="REC_2" inventoryItemId="INV_2" productId="P_BLACK_PANT" shipmentId="SHIPMENT_1" orderId="ORDER_1" orderItemSeqId="00002" datetimeReceived="2021-10-23 07:00:00" quantityAccepted="100" />
+    <InventoryItemDetail inventoryItemId="INV_1" inventoryItemDetailSeqId="INVS_1" effectiveDate="2021-10-23 7:00:00" qunatityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="0" unitCost="50" orderId="ORDER_1" orderItemSeqId="00001" shipmentId="SHIPMENT_1" receiptId="REC_1" />
+    <InventoryItemDetail inventoryItemId="INV_1" inventoryItemDetailSeqId="INVS_2" effectiveDate="2021-10-23 7:00:00" qunatityOnHandDiff="0" availableToPromiseDiff="0" accountingQuantityDiff="500" unitCost="50" />
+    <InventoryItemDetail inventoryItemId="INV_2" inventoryItemDetailSeqId="INVS_1" effectiveDate="2021-10-23 7:00:00" qunatityOnHandDiff="500" availableToPromiseDiff="500" accountingQuantityDiff="0" unitCost="50" orderId="ORDER_1" orderItemSeqId="00002" shipmentId="SHIPMENT_1" receiptId="REC_2" />
+    <InventoryItemDetail inventoryItemId="INV_2" inventoryItemDetailSeqId="INVS_2" effectiveDate="2021-10-23 7:00:00" qunatityOnHandDiff="0" availableToPromiseDiff="0" accountingQuantityDiff="500" unitCost="50" />
+
+    <OrderStatus orderStatusId="ODR_STATUS_7" statusId="ITEM_COMPLETED" orderId="ORDER_1" orderItemSeqId="00001" statusDatetime="2021-10-23 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_8" statusId="ITEM_COMPLETED" orderId="ORDER_1" orderItemSeqId="00002" statusDatetime="2021-10-23 11:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_9" statusId="ORDER_COMPLETED" orderId="ORDER_1" statusDatetime="2021-10-23 11:00:00" statusUserLogin="admin" />
+
+</entity-engine-xml>

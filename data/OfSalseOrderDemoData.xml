@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+    <!-- Create Sales Order -->
+    <OrderHeader orderId="ORDER_2" orderTypeId="SALES_ORDER" orderDate="2021-10-25 09:00:00" priority="0" entryDate="2021-10-25 09:00:00" statusId="ORDER_APPROVED" currencyUom="USD" originFacilityId="WAREHOUSE_1" productStoreId="9000" remainingSubTotal="10,000" grandTotal="10,000" />
+    <OrderItem orderId="ORDER_2" orderItemSeqId="00001" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="P_RED_SHIRT" prodCatelogId="DemoCatelog" quantity="500" selectedAmount="0" unitPrice="500" itemDescription="Shirt" statusId="ITEM_CREATED" />
+    <OrderItem orderId="ORDER_2" orderItemSeqId="00002" orderItemTypeId="PRODUCT_ORDER_ITEM" productId="P_BLACK_PANT" prodCatelogId="DemoCatelog" quantity="500" selectedAmount="0" unitPrice="500" itemDescription="Pant" statusId="ITEM_CREATED" />
+    <OrderItemShipGroup orderId="ORDER_2" shipGroupSeqId="00002" shipmentMethodTypeId="STANDARD" carrierRoleTypeId="CARRIER" facilityId="WAREHOUSE_1" contactMechId="10031"/>
+    <OrderItemShipGroupAssoc orderId="ORDER_2" orderItemSeqId="00001" shipGroupSeqId="00002" quantity="500" />
+    <OrderItemShipGroupAssoc orderId="ORDER_2" orderItemSeqId="00002" shipGroupSeqId="00002" quantity="500" />
+    <OrderContactMech orderId="ORDER_2" contactMechPurposeTypeId="SHIPPING_LOCATION" contactMechId="10031"/>
+    <OrderContactMech orderId="ORDER_2" contactMechPurposeTypeId="BILLING_LOCATION" contactMechId="10031" />
+    <OrderRole orderId="ORDER_2" partyId="Company" roleTypeId="BILL_FROM_VENDOR" />
+    <OrderRole orderId="ORDER_2" partyId="DEMO_SURIYA" roleTypeId="BILL_TO_CUSTOMER" />
+    <OrderRole orderId="ORDER_2" partyId="DEMO_SURIYA" roleTypeId="SHIP_TO_CUSTOMER" />
+    <OrderRole orderId="ORDER_2" partyId="DEMO_SURIYA" roleTypeId="END_USER_CUSTOMER" />
+    <OrderRole orderId="ORDER_2" partyId="DEMO_SURIYA" roleTypeId="PLACING_CUSTOMER" />
+
+
+    <Picklist picklistId="PIK_1" facilityId="WAREHOUSE_1" statusId="PICKLIST_PICKED" createdByUserLogin="admin" lastModifiedByUserLogin="admin"/>
+    <PicklistBin picklistBinId="PIK_B_1" picklistId="PIK_1" binLocationNumber="1" primaryOrderId="ORDER_2" primaryShipGroupSeqId="00002"/>
+    <PicklistItem picklistBinId="PIK_B_1" orderId="ORDER_2" orderItemSeqId="00001" shipGroupSeqId="00002" inventoryItemId="INV_1" itemStatusId="PICKITEM_COMPLETED" quantity="500"/>
+    <PicklistItem picklistBinId="PIK_B_1" orderId="ORDER_2" orderItemSeqId="00002" shipGroupSeqId="00002" inventoryItemId="INV_2" itemStatusId="PICKITEM_COMPLETED" quantity="500"/>
+
+    <Shipment shipmentId="SHIPMENT_2" shipmentTypeId="SALES_SHIPMENT" statusId="SHIPMENT_PACKED" primaryOrderId="ORDER_2" picklistBinId="PIK_B_1" primaryShipGroupSeqId="00002" estimatedShipCost="10" originFacilityId="WAREHOUSE_1" originTelecomNumberId="9201" destinationTelecomNumberId="9025" partyIdTo="DemoCustomer" partyIdFrom="Company" createdDate="2021-10-27 00:00:00" createdByUser="admin" />
+    <ShipmentItem shipmentId="SHIPMENT_2" shipmentItemSeqId="00001" productId="P_RED_SHIRT" quantity="500" />
+    <ShipmentItem shipmentId="SHIPMENT_2" shipmentItemSeqId="00002" productId="P_BLACK_PANT" quantity="500" />
+    <OrderShipment orderId="ORDER_2" orderItemSeqId="00001" shipGroupSeqId="00002" shipmentId="SHIPMENT_2" shipmentItemSeqId="00001" qunatity="500" />
+    <OrderShipment orderId="ORDER_2" orderItemSeqId="00002" shipGroupSeqId="00002" shipmentId="SHIPMENT_2" shipmentItemSeqId="00002" qunatity="500" />
+    <ShipmentRouteSegment shipmentId="SHIPMENT_2" shipmentRouteSegmentId="00001" originFacilityId="WAREHOUSE_1" originTelecomNumberId="9201" destContactMechId="9015" carrierPartyTo="UPS" shipmentMethodId="NEXT_DAY" />
+    <ShipmentPackage shipmentId="SHIPMENT_2" shipmentPackageSeqId="00001" />
+    <ShipmentPackageRouteSeg shipmentId="SHIPMENT_2" shipmentPackageSeqId="00001" shipmentRouteSegmentId="00001" />
+    <InventoryItemDetail inventoryItemId="INV_1" inventoryItemDetailSeqId="INVS_3" effectiveDate="2021-10-27 00:00:00" qunatityOnHandDiff="-500" availableToPromiseDiff="0" orderId="ORDER_2" orderItemSeqId="00002" shipmentId="SHIPMENT_2" />
+    <InventoryItemDetail inventoryItemId="INV_2" inventoryItemDetailSeqId="INVS_4" effectiveDate="2021-10-27 00:00:00" qunatityOnHandDiff="-500" availableToPromiseDiff="0" orderId="ORDER_2" orderItemSeqId="00002" shipmentId="SHIPMENT_2" />
+
+    <OrderStatus orderStatusId="ODR_STATUS_10" statusId="ITEM_COMPLETED" orderId="ORDER_2" orderItemSeqId="00001" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_11" statusId="ORDER_COMPLETED" orderId="ORDER_2" orderItemSeqId="00001" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_12" statusId="ITEM_COMPLETED" orderId="ORDER_2" orderItemSeqId="00002" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <OrderStatus orderStatusId="ODR_STATUS_13" statusId="ORDER_COMPLETED" orderId="ORDER_2" orderItemSeqId="00002" statusDatetime="2021-10-27 00:00:00" statusUserLogin="admin" />
+    <ItemIssuance itemIssuanceId="ITMI_1" orderId="ORDER_2" orderItemSeqId="00001" shipGroupSeqId="00002" inventoryItemId="INV_1" shipmentId="SHIPMENT_2" shipmentItemSeqId="00001" issuedDatetime="2021-10-27 00:00:00" issuedByUserLoginId="admin" quantity="500" />
+    <ItemIssuance itemIssuanceId="ITMI_2" orderId="ORDER_2" orderItemSeqId="00002" shipGroupSeqId="00002" inventoryItemId="INV_2" shipmentId="SHIPMENT_2" shipmentItemSeqId="00002" issuedDatetime="2021-10-27 00:00:00" issuedByUserLoginId="admin" quantity="500" />
+</entity-engine-xml>
